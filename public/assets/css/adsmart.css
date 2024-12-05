@@ -1,0 +1,122 @@
+.mb-48 {
+    margin-bottom: 48px !important;
+}
+
+.breadcrumb-item {
+    text-decoration: underline !important;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+    color: #ffffff !important;
+}
+
+.breadcrumb-item.active {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+input ~ span {
+    font-size: 14px;
+}
+
+/* tooltip */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+#catalogueUrl {
+    border-right: none;
+}
+
+.max-text-20ch {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 20ch;
+}
+
+.max-text-15ch {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 20ch;
+}
+
+.line-clamp-1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.iq-navbar-header h1.h1 {
+    /* max-width: 960px; */
+}
+
+@media (max-width: 576px) {
+    .iq-navbar-header h1.h1 {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+}
+@media (max-width: 992px) {
+    .container-link-banner-preview {
+        margin-bottom: 1.5rem;
+    }
+    .iq-navbar-header .h-100.iq-header-img {
+        height: 100% !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .iq-navbar-header .iq-container .row .col-md-12 > div {
+        flex-wrap: nowrap !important;
+    }
+    .container-btn-detail-catalogue {
+        white-space: nowrap;
+    }
+    .container-link-banner-preview {
+        margin-bottom: 2rem;
+    }
+    .container-link-banner-preview .row {
+        height: 100%;
+    }
+    .card.card-banner-preview {
+        height: 100%;
+    }
+}

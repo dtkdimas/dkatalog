@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    a {
+        @apply no-underline;
+    }
+}
+/* 
+@layer components {
+    .btn-xs {
+        @apply px-3 py-2 text-xs font-semibold rounded-[4px] focus:ring-2 text-center whitespace-nowrap;
+    }
+    .btn-sm {
+        @apply px-3 py-2 text-sm font-semibold rounded-[4px] focus:ring-2 text-center whitespace-nowrap;
+    }
+    .btn-base {
+        @apply px-5 py-[10px] text-base font-semibold rounded-[4px] focus:ring-4  text-center whitespace-nowrap;
+    }
+    .btn-lg {
+        @apply px-5 py-3 text-base font-semibold rounded-[4px] focus:ring-4 text-center whitespace-nowrap;
+    }
+    .btn-xl {
+        @apply px-6 py-[14px] text-xl font-semibold rounded-[4px] focus:ring-4 text-center;
+    }
+    .btn-blue {
+        @apply capitalize text-white hover:text-white hover:no-underline bg-blue-600 hover:bg-blue-700 focus:bg-blue-800 focus:ring-blue-300 cursor-pointer;
+    }
+    .btn-secondary {
+        @apply capitalize text-gray-700 hover:text-gray-700 hover:no-underline bg-secondary-500 hover:bg-secondary-600 focus:bg-secondary-500 focus:ring-secondary-300 cursor-pointer;
+    }
+    .btn-outline {
+        @apply capitalize text-gray-600 border border-gray-500 hover:border-gray-200 hover:no-underline bg-transparent hover:bg-gray-200 focus:bg-transparent focus:ring-gray-300 cursor-pointer;
+    }
+    .btn-disabled {
+        @apply capitalize text-white bg-gray-300 focus:ring-0 cursor-not-allowed;
+    }
+} */
