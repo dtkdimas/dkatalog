@@ -274,11 +274,14 @@
 <script>
     $(document).ready(function() {
         let table = $('#product-table').DataTable({
-            processing: false,
+            processing: true,
             serverSide: true,
             ajax: {
                 url: "{{ route('catalogues.show', $catalogue->id) }}",
-                type: 'GET'
+                type: 'GET',
+                error: function(xhr, error, thrown) {
+                    console.log("Ajax error: ", error, thrown);
+                }
             },
             columns: [{
                     data: 'DT_RowIndex',
@@ -319,12 +322,13 @@
                     searchable: false
                 }
             ],
-            "columnDefs": [{
-                "targets": 2,
-                "className": "max-text-20ch"
+            columnDefs: [{
+                targets: 2,
+                className: "max-text-20ch"
             }]
         });
     });
+
 
     function copyTextToClipboard(textId, buttonCopyId) {
         let copyText = document.getElementById(textId);
