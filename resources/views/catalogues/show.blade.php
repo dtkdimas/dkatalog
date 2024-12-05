@@ -273,10 +273,13 @@
 </x-app-layout>
 <script>
     $(document).ready(function() {
-        $('#product-table').DataTable({
+        let table = $('#product-table').DataTable({
             processing: false,
             serverSide: true,
-            ajax: '{{ route('catalogues.show', $catalogue->id) }}',
+            ajax: {
+                url: "{{ route('catalogues.show', $catalogue->id) }}",
+                type: 'GET'
+            },
             columns: [{
                     data: 'DT_RowIndex',
                     name: 'DT_RowIndex',
