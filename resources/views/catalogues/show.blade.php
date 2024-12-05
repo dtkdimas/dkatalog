@@ -322,8 +322,7 @@
             }]
         });
     });
-</script>
-<script>
+
     function copyTextToClipboard(textId, buttonCopyId) {
         let copyText = document.getElementById(textId);
         copyText.select();
