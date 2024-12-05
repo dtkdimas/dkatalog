@@ -139,11 +139,11 @@ class CatalogueController extends Controller
                 })
                 ->addColumn('action', function ($product) use ($catalogue) {
                     return '<a href="' . route('catalogues.productStatistics', [$catalogue->id, $product->id]) . '" class="btn btn-success btn-sm">Statistik</a>
-                        <a href="' . route('catalogues.products.edit', [$catalogue->id, $product->id]) . '" class="btn btn-warning btn-sm">Edit</a>
-                        <form action="' . route('catalogues.products.destroy', [$catalogue->id, $product->id]) . '" method="POST" style="display:inline;" onsubmit="return confirm(\'Are you sure you want to delete ' . $product->product_name . '?\');">
-                            ' . csrf_field() . method_field("DELETE") . '
-                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-                        </form>';
+                            <a href="' . route('catalogues.products.edit', [$catalogue->id, $product->id]) . '" class="btn btn-warning btn-sm">Edit</a>
+                            <form action="' . route('catalogues.products.destroy', [$catalogue->id, $product->id]) . '" method="POST" style="display:inline;" onsubmit="return confirm(\'Are you sure you want to delete ' . $product->product_name . '?\');">
+                                ' . csrf_field() . method_field("DELETE") . '
+                                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                            </form>';
                 })
                 ->rawColumns(['thumbnail', 'product_url', 'action'])
                 ->make(true);
@@ -152,6 +152,7 @@ class CatalogueController extends Controller
         $catalogueStatistics = $catalogue->catalogueStatistics->first();
         return view('catalogues.show', compact('catalogue', 'catalogueStatistics'));
     }
+
 
     /**
      * Show the form for editing the specified resource.
