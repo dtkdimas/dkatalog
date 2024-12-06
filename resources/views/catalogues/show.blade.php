@@ -273,6 +273,8 @@
 </x-app-layout>
 <script>
     $(document).ready(function() {
+        const csrfToken = $('meta[name="csrf-token"]').attr('content');
+
         let table = $('#product-table').DataTable({
             processing: true,
             serverSide: true,
