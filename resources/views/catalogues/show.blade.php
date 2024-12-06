@@ -279,6 +279,9 @@
             ajax: {
                 url: "{{ route('catalogues.show', $catalogue->id) }}",
                 type: 'GET',
+                headers: {
+                    'X-CSRF-TOKEN': csrfToken
+                },
                 error: function(xhr, error, thrown) {
                     console.log("Ajax error: ", error, thrown);
                 }
