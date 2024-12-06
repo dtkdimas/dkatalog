@@ -276,7 +276,7 @@
         const csrfToken = $('meta[name="csrf-token"]').attr('content');
 
         let table = $('#product-table').DataTable({
-            processing: true,
+            processing: false,
             serverSide: true,
             ajax: {
                 url: "{{ route('catalogues.show', $catalogue->id) }}",
