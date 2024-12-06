@@ -292,7 +292,7 @@
             // Check if the impression has already been tracked for this session
             if (!sessionStorage.getItem(`impression_${catalogueId}`)) {
                 // Track the impression
-                fetch(`${process.env.MIX_APP_URL}/api/catalogue/impression`, {
+                fetch(`{{ env('APP_URL') }}/api/catalogue/impression`, {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json",
@@ -318,7 +318,7 @@
 
         // Track click on banners
         function trackClick(catalogueId) {
-            fetch(`${process.env.MIX_APP_URL}/api/catalogue/click`, {
+            fetch(`{{ env('APP_URL') }}/api/catalogue/click`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
@@ -338,7 +338,7 @@
 
         // Track click on product
         function trackProductClick(productId) {
-            fetch(`${process.env.MIX_APP_URL}/api/product/click`, {
+            fetch(`{{ env('APP_URL') }}/api/product/click`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
