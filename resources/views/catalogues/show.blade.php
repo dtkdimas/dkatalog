@@ -85,7 +85,7 @@
                     <div>
                         <div class="input-group mb-3">
                             <input type="text" class="form-control"
-                                value="{{ __('http://localhost:8000/api/catalogues/') . $catalogue->id }}"
+                                value="{{ env('APP_URL') . '/api/catalogues/' . $catalogue->id }}"
                                 id="linkCatalogueJSON" readonly>
                             <button class="btn btn-gray-subtle" type="button" id="buttonCopyLinkJSON"
                                 onclick="copyTextToClipboard('linkCatalogueJSON', 'buttonCopyLinkJSON')">
@@ -94,7 +94,7 @@
                         </div>
                         <div class="input-group">
                             <input type="text" class="form-control"
-                                value="{{ __('http://localhost:8000/catalogues/') . $catalogue->id . '/live' }}"
+                                value="{{ env('APP_URL') . '/catalogues/' . $catalogue->id . '/live' }}"
                                 id="linkCatalogueIframe" readonly>
                             <button class="btn btn-gray-subtle" type="button" id="buttonCopyLinkIframe"
                                 onclick="copyTextToClipboard('linkCatalogueIframe', 'buttonCopyLinkIframe')">
