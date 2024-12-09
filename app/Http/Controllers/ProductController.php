@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Catalogue;
 use App\Models\Product;
-use App\Models\productStatistics;
+use App\Models\ProductStatistics;
 use Illuminate\Http\Request;
 
 /**
