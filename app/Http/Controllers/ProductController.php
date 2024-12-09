@@ -64,7 +64,7 @@ class ProductController extends Controller
             'discounted_price' => $validated['discounted_price'],
         ]);
 
-        productStatistics::create([
+        ProductStatistics::create([
             'product_id' => Product::latest()->first()->id,
             'date' => now(),
             'click' => 0,
