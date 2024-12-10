@@ -46,8 +46,10 @@
 
         #{{ __('id-') . $catalogue->id }} .cb-container .cb-header img {
             width: 100%;
+            max-width: 300px;
             height: 100px;
             border-radius: 8px;
+            object-fit: cover;
         }
 
         #{{ __('id-') . $catalogue->id }} .cb-container .cb-header .swiper-button-next::after,

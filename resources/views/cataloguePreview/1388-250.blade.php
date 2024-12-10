@@ -47,6 +47,9 @@
 
         #{{ __('id-') . $catalogue->id }} .cb-container .cb-header img {
             width: 100%;
+            max-width: 694px;
+            height: 120px;
+            object-fit: cover;
             border-radius: 8px;
         }
 

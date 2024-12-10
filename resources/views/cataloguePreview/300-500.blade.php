@@ -55,8 +55,9 @@
 
         .cb-container .swiperHeader img {
             width: 100%;
-            height: 150px;
-            border-radius: 8px;
+            max-width: 300px;
+            height: 100px;
+            object-fit: cover border-radius: 8px;
         }
 
         .cb-container .swiperHeader .swiper-button-next::after,
