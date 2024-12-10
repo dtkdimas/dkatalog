@@ -109,10 +109,10 @@
                     <h3 class="h3 fw-bold mb-3">{{ __('Banner') }}</h3>
                     @if ($catalogue->size == '1388x250')
                         <img src="{{ $catalogue->catalogue_banner }}" alt=""
-                            style="width: 100%; max-width: 694px; height: 120px; ">
+                            style="width: 100%; max-width: 694px; height: 120px; object-fit: cover;">
                     @else
                         <img src="{{ $catalogue->catalogue_banner }}" alt=""
-                            style="width: 100%; max-width: 300px; height: 100px;">
+                            style="width: 100%; max-width: 300px; height: 100px; object-fit: cover;">
                     @endif
                 </div>
             </div>
