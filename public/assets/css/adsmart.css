@@ -61,10 +61,6 @@ input ~ span {
     border-right: none;
 }
 
-/* Navigation Button */
-.nav-link.active {
-    background: #ff0000 !important;
-}
 .max-text-20ch {
     white-space: nowrap;
     overflow: hidden;
