@@ -104,11 +104,16 @@
                     </div>
                 </div>
             </div>
-
             <div class="col-12 col-lg-8 h-100">
                 <div class="card p-4 mb-0 d-flex justify-content-between card-banner-preview">
                     <h3 class="h3 fw-bold mb-3">{{ __('Banner') }}</h3>
-                    <img src="{{ $catalogue->catalogue_banner }}" alt="">
+                    @if ($catalogue->size == '1388x250')
+                        <img src="{{ $catalogue->catalogue_banner }}" alt=""
+                            style="width: 100%; max-width: 694px; height: 120px; ">
+                    @else
+                        <img src="{{ $catalogue->catalogue_banner }}" alt=""
+                            style="width: 100%; max-width: 300px; height: 100px;">
+                    @endif
                 </div>
             </div>
         </div>
