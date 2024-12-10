@@ -1,13 +1,21 @@
 <x-app-layout>
     <x-slot name="header">
-        <h1 class="h1 line-clamp-1">{{ __('Detail') }} {{ $brand->brand_name }}</h1>
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('brands.index') }}">{{ __('Brands') }}</a></li>
-                <li class="breadcrumb-item active max-text-20ch" aria-current="page">{{ __('Detail') }}
-                    {{ $brand->brand_name }}</li>
-            </ol>
-        </nav>
+        <div class="flex-wrap d-flex justify-content-between align-items-center">
+            <div>
+                <h1 class="h1 line-clamp-1">{{ __('Detail') }} {{ $brand->brand_name }}</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{{ route('brands.index') }}">{{ __('Brands') }}</a></li>
+                        <li class="breadcrumb-item active max-text-20ch" aria-current="page">{{ __('Detail') }}
+                            {{ $brand->brand_name }}</li>
+                    </ol>
+                </nav>
+            </div>
+            <div>
+                <a href="{{ route('catalogues.create', ['brand_id' => $brand->id]) }}"
+                    class="btn btn-warning">{{ __('Create Catalogue') }}</a>
+            </div>
+        </div>
     </x-slot>
 
     <div class="card p-5">
